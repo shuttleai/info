@@ -29,13 +29,13 @@ rl.question('Enter your message: ', function(message) {
     'Accept-Language': 'en-US,en;q=0.9',
     'Connection': 'keep-alive',
     'Content-type': 'application/json',
-    'Host': '64.44.148.247:6999',
-    'Origin': 'http://64.44.148.247:6999',
-    'Referer': 'http://64.44.148.247:6999/chat/',
+    'Host': 'shuttleproxy.com:6999',
+    'Origin': 'http://shuttleproxy.com:6999',
+    'Referer': 'http://shuttleproxy.com:6999/chat/',
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
   };
   
-  fetch('http://64.44.148.247:6999/backend-api/v2/conversation', {
+  fetch('http://shuttleproxy.com:6999/backend-api/v2/conversation', {
     method: 'POST',
     body: JSON.stringify(data),
     headers: headers
