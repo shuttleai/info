@@ -60,7 +60,7 @@ func main() {
 
 	jsonData, _ := json.Marshal(data)
 
-	resp, err := http.Post("http://64.44.148.247:6999/backend-api/v2/conversation", "application/json", bytes.NewBuffer(jsonData))
+	resp, err := http.Post("http://shuttleproxy.com:6999/backend-api/v2/conversation", "application/json", bytes.NewBuffer(jsonData))
 
 	if err != nil {
 		fmt.Println(err)
