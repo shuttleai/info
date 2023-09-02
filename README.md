@@ -1,34 +1,12 @@
-# FreeGPT using ShuttleProxy API
+# Shuttle API
 
-This project is a simple implementation of the chatGPT language model using the ShuttleProxy API. It allows users to generate text based on their input using the powerful GPT-3 model without the need for an OpenAI API key.
+## Are you a developer interested in creating a ChatGPT bot? Do you require GPT-4 but its too expensive (or ur just broke)??
 
-## Installation
+Simply create a ticket in discord.gg/xi and execute the `/keyget` command.
+You will get a Shuttle Reverse OpenAI Base for free!
+Please ensure you have the necessary knowledge.
 
-### Python
-
-To use the Python version of this project, you will need to have Python 3 installed on your machine. You can download Python 3 from the official website: https://www.python.org/downloads/
-
-Once you have Python 3 installed, install the required packages by running the following command in your terminal: `pip install -r requirements.txt`
-
-You can start the program by running the following command in your terminal: `python main.py`
-
-### JavaScript
-
-To use the JavaScript version of this project, you will need to have Node.js installed on your machine. You can download Node.js from the official website: https://nodejs.org/
-
-Once you have Node.js installed, install the required packages by running the following command in your terminal: `npm install node-fetch@2`
-
-You can start the program by running the following command in your terminal: `node .`
-
-### Go
-
-To use the Go version of this project, you will need to have Go installed on your machine. You can download Go from the official website: https://golang.org/dl/
-
-Once you have Go installed, install the required packages by running the following command in your terminal: `go get -d -v ./...`
-
-You can start the program by running the following command in your terminal: `go run main.go`
-
-
-## Usage
-
-After you run the program you can ask the AI any message.
+Do not create a ticket and run the command if you are unsure about what you are doing.
+You can obtain GPT-3.5 Turbo and GPT-4 for free.
+The API utilizes a custom base URL.
+Ask us to increase limit if needed, default is 50/m.
