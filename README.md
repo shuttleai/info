@@ -1,12 +1,24 @@
 # Shuttle API
 
-## Are you a developer interested in creating a ChatGPT bot? Do you require GPT-4 but its too expensive (or ur just broke)??
+## Introduction
 
-Simply create a ticket in discord.gg/xi and execute the `/keyget` command.
-You will get a Shuttle Reverse OpenAI Base for free!
-Please ensure you have the necessary knowledge.
+Are you a developer interested in creating a ChatGPT bot, but you find GPT-4 to be too expensive or you're on a tight budget? Look no further!
 
-Do not create a ticket and run the command if you are unsure about what you are doing.
-You can obtain GPT-3.5 Turbo and GPT-4 for free.
-The API utilizes a custom base URL.
-Ask us to increase limit if needed, default is 50/m.
+## Getting Started
+
+To obtain a free Shuttle Reverse OpenAI Base, follow these steps:
+
+1. Create a ticket in [our Discord server](https://discord.gg/xi).
+2. Execute the `/keyget` command in the Discord server.
+
+Please make sure you have the necessary knowledge to use the API effectively.
+
+**Note:** Do not create a ticket and run the command if you are unsure about what you are doing.
+
+## Free Access
+
+With Shuttle API, you can access GPT-3.5 Turbo and GPT-4 for free.
+
+## Usage
+
+The API utilizes a custom base URL. If you need to increase your limit, feel free to ask us. The default limit is 50 requests per minute.
