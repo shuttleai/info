@@ -8,7 +8,7 @@ Are you a developer interested in creating a ChatGPT bot, but you find GPT-4 to 
 
 To obtain a free Shuttle Reverse OpenAI Base, follow these steps:
 
-1. Create a ticket in [our Discord server](https://discord.gg/xi).
+1. Create a ticket in [our Discord server](https://discord.gg/XkBUaxYEWZ).
 2. Execute the `/getkey` command in the Discord server.
 
 Please make sure you have the necessary knowledge to use the API effectively.
