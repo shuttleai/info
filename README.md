@@ -21,4 +21,4 @@ With Shuttle API, you can access GPT-3.5 Turbo and GPT-4 for free.
 
 ## Usage
 
-The API utilizes a custom base URL. If you need to increase your limit, feel free to ask us. The default limit is 50 requests per minute.
+The API utilizes a custom base URL. If you need to increase your limit, feel free to ask us. The default limit is 20 requests per minute.
