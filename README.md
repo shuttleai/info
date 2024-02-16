@@ -1,29 +1,131 @@
-# Shuttle API
+# ShuttleAI API
 
 ## Introduction
 
 Are you a developer interested in creating a AI bot/site, but you find GPT-4 to be too expensive or you're on a tight budget? Look no further!
-Shuttle API provides `gpt-4` and `dalle-3` all for free with a super **stable** and **free** api!
+ShuttleAI API provides `gpt-4` and 100+ other models for free with a super **stable** and **free** api!
 ## Getting Started
 
-To obtain a free Shuttle API key, follow these steps:
+To obtain a free ShuttleAI API key, follow these steps:
 
 1. Join [our Discord server](https://discord.gg/shuttleai).
 2. Run `/getkey` command in the Discord server.
+3. Verify yourself.
 
-Please make sure you have the necessary knowledge to use the API effectively.
+You can view ShuttleAI API docs for better instructions on how to interact with our API at https://docs.shuttleai.app/
 
-## Our Models:
+## ShuttleAI Models:
 ```json
 {
     "data": [
         {
-            "id": "internet-gpt",
-            "object": "model",
-            "owned_by": "shuttle/openai",
-            "tokens": 16385,
-            "info": "GPT-3.5-Turbo-1106 with added Real-Time Live Web Browsing",
+            "id": "gpt-4-turbo-preview",
+            "object": "proxy",
+            "proxy_to": "gpt-4-0125-preview",
+            "owned_by": "openai",
+            "tokens": 128000,
+            "info": "Always proxies to latest gpt-4-turbo-preview model.",
             "premium": true,
+            "cost": 4,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "gpt-4-0125-preview",
+            "object": "model",
+            "owned_by": "openai",
+            "tokens": 128000,
+            "info": "New (laziness reduced) GPT-4-Turbo-Preview 128k",
+            "premium": true,
+            "cost": 4,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "gpt-4-1106-preview",
+            "object": "model",
+            "owned_by": "openai",
+            "tokens": 128000,
+            "info": "GPT-4-Turbo-Preview 128k",
+            "premium": true,
+            "cost": 4,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "gpt-4-vision-preview",
+            "object": "model",
+            "owned_by": "openai",
+            "tokens": 128000,
+            "info": "GPT-4-Vision-Preview 128k",
+            "premium": true,
+            "cost": 4,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "gpt-4",
+            "object": "model",
+            "owned_by": "openai",
+            "tokens": 8192,
+            "info": "Plain gpt-4, directly from openai enterprise.",
+            "cost": 2,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "gpt-4-bing",
+            "object": "model",
+            "owned_by": "bing/openai",
+            "tokens": 29000,
+            "info": "Bing GPT-4 Turbo. Bing web search is enabled by default. Send `internet: false` to disable.",
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "gpt-4-32k",
+            "object": "model",
+            "owned_by": "openai",
+            "tokens": 32000,
+            "info": "Free provider pool of real GPT-4-32k, falls back to Bing GPT-4 32k if free pool is out. Premium pool found @ 32k-0613.",
+            "cost": 3,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "gpt-4-32k-0613",
+            "object": "model",
+            "owned_by": "openai",
+            "tokens": 32768,
+            "premium": true,
+            "cost": 3,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "gpt-4-0613",
+            "object": "model",
+            "owned_by": "openai",
+            "tokens": 8192,
+            "cost": 2,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/chat/completions"
             ]
@@ -35,91 +137,31 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "tokens": 8192,
             "info": "Raw GPT-4; great for students.",
             "premium": true,
-            "maintenance": true,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/chat/completions"
             ]
         },
         {
-            "id": "code-gpt",
+            "id": "gpt-3.5-turbo",
             "object": "model",
-            "owned_by": "shuttle/openai",
+            "owned_by": "openai",
+            "tokens": 4097,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "gpt-3.5-turbo-0125",
+            "object": "model",
+            "owned_by": "openai",
             "tokens": 16385,
-            "info": "GPT 3.5 Turbo 16K with the automatic ability to interpret and run code from a variety of languages including modules/packages. Basically Code Interpreter from GPT Plus.",
-            "maintenance": true,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
-        },
-        {
-            "id": "image-gpt",
-            "object": "model",
-            "owned_by": "shuttle/openai",
-            "tokens": 16385,
-            "info": "GPT-3.5-Turbo-1106 Chat with added automatic Image Generations via direct chat",
-            "maintenance": true,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
-        },
-        {
-            "id": "gpt-3.5-vision",
-            "object": "model",
-            "owned_by": "shuttle/openai",
-            "tokens": 4096,
-            "info": "GPT-3.5 with added automatic image analyzations/descriptions. Not bad, try it.",
-            "maintenance": true,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
-        },
-        {
-            "id": "gpt-4",
-            "object": "model",
-            "owned_by": "bing/openai",
-            "tokens": 32768,
-            "info": "Full-Stack Bing Chat. Includes Bing internet, optional citations, as well as optional live-per-prompt AI suggestions.",
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
-        },
-        {
-            "id": "gpt-4-32k",
-            "object": "proxy",
-            "proxy_to": "gpt-4",
-            "owned_by": "bing/openai",
-            "tokens": 32768,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
-        },
-        {
-            "id": "gpt-4-0613",
-            "object": "model",
-            "owned_by": "openai",
-            "tokens": 8192,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
-        },
-        {
-            "id": "gpt-4-1106-preview",
-            "object": "model",
-            "owned_by": "openai",
-            "tokens": 128000,
-            "info": "GPT-4-Turbo-128K Preview",
             "premium": true,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
-        },
-        {
-            "id": "gpt-4-vision-preview",
-            "object": "model",
-            "owned_by": "openai",
-            "tokens": 4096,
-            "info": "GPT-4-Turbo-Vision Preview",
-            "premium": true,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/chat/completions"
             ]
@@ -129,15 +171,30 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "object": "model",
             "owned_by": "openai",
             "tokens": 16385,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/chat/completions"
             ]
         },
         {
-            "id": "gpt-3.5-turbo",
+            "id": "gpt-3.5-turbo-0613",
             "object": "model",
             "owned_by": "openai",
-            "tokens": 8192,
+            "tokens": 4097,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "gpt-3.5-turbo-0301",
+            "object": "model",
+            "owned_by": "openai",
+            "tokens": 4097,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/chat/completions"
             ]
@@ -147,6 +204,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "object": "model",
             "owned_by": "openai",
             "tokens": 16384,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/chat/completions"
             ]
@@ -157,24 +216,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "proxy_to": "gpt-3.5-turbo-1106",
             "owned_by": "openai",
             "tokens": 16385,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
-        },
-        {
-            "id": "gpt-3.5-turbo-0301",
-            "object": "model",
-            "owned_by": "openai",
-            "tokens": 4097,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
-        },
-        {
-            "id": "gpt-3.5-turbo-0613",
-            "object": "model",
-            "owned_by": "openai",
-            "tokens": 4097,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/chat/completions"
             ]
@@ -183,9 +226,38 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "id": "chatgpt",
             "object": "model",
             "owned_by": "openai",
-            "tokens": 16385,
+            "tokens": 8192,
             "info": "official chatgpt (GPT 3.5) aka openai's fastest and most capable free-to-use model aka text-davinci-002-render-sha",
-            "maintenance": true,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "code-gpt",
+            "object": "model",
+            "owned_by": "shuttle/openai",
+            "tokens": 16385,
+            "info": "GPT-3.5-Turbo-1106 with added Real-Time Live Code Execution/Interpretation",
+            "premium": true,
+            "file_upload": true,
+            "cost": 3,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "internet-gpt",
+            "object": "model",
+            "owned_by": "shuttle/openai",
+            "tokens": 16385,
+            "info": "GPT-3.5-Turbo-1106 with added Real-Time Live Web Browsing",
+            "premium": true,
+            "file_upload": true,
+            "cost": 2,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/chat/completions"
             ]
@@ -195,6 +267,9 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "object": "model",
             "owned_by": "anthropic",
             "tokens": 25000,
+            "file_upload": true,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/chat/completions"
             ]
@@ -204,17 +279,34 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "object": "model",
             "owned_by": "anthropic",
             "tokens": 100000,
+            "premium": true,
+            "file_upload": true,
+            "cost": 3,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/chat/completions"
             ]
         },
         {
-            "id": "claude-2-100k",
+            "id": "claude-2.0",
             "object": "model",
             "owned_by": "anthropic",
             "tokens": 100000,
             "premium": true,
-            "maintenance": true,
+            "cost": 4,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "claude-2.1",
+            "object": "model",
+            "owned_by": "anthropic",
+            "tokens": 200000,
+            "premium": true,
+            "cost": 4,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/chat/completions"
             ]
@@ -224,35 +316,34 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "object": "model",
             "owned_by": "google",
             "tokens": 8192,
-            "maintenance": true,
+            "cost": 2,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/chat/completions"
             ]
         },
         {
-            "id": "code-llama-34b",
+            "id": "gemini-pro",
             "object": "model",
-            "owned_by": "metaai",
-            "tokens": 2048,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
-        },
-        {
-            "id": "llama-70b",
-            "object": "model",
-            "owned_by": "metaai",
-            "tokens": 2048,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
-        },
-        {
-            "id": "llava-13b",
-            "object": "model",
-            "owned_by": "metaai",
-            "tokens": 2048,
+            "owned_by": "google",
+            "tokens": 30720,
+            "info": "very jailbreakable, works best when sending approval assistant message after jailbreak.",
             "premium": true,
+            "cost": 2,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "gemini-pro-vision",
+            "object": "model",
+            "owned_by": "google",
+            "tokens": 12288,
+            "info": "Gemini Pro Vision, pass an `image` variable with your image (url, bytes, base64).",
+            "premium": true,
+            "cost": 3,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/chat/completions"
             ]
@@ -262,6 +353,107 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "object": "model",
             "owned_by": "mistralai",
             "tokens": 4096,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "mistral-medium",
+            "object": "model",
+            "owned_by": "mistralai",
+            "tokens": 32768,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "mixtral-8x7b",
+            "object": "model",
+            "owned_by": "mistralai",
+            "tokens": 32768,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "dolphin-mixtral-8x7b",
+            "object": "model",
+            "owned_by": "cognitivecomputations",
+            "tokens": 4096,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "pplx-70b-online",
+            "object": "model",
+            "owned_by": "perplexitylabs",
+            "tokens": 32768,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "pplx-70b-chat",
+            "object": "model",
+            "owned_by": "perplexitylabs",
+            "tokens": 32768,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "pplx-7b-online",
+            "object": "model",
+            "owned_by": "perplexitylabs",
+            "tokens": 32768,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "pplx-7b-chat",
+            "object": "model",
+            "owned_by": "perplexitylabs",
+            "tokens": 32768,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "deepseek-coder",
+            "object": "model",
+            "owned_by": "deepseek",
+            "tokens": 4096,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "deepseek-chat",
+            "object": "model",
+            "owned_by": "deepseek",
+            "tokens": 4096,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/chat/completions"
             ]
@@ -270,18 +462,245 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "id": "airoboros-70b",
             "object": "model",
             "owned_by": "jondurbin",
-            "tokens": 4096,
+            "tokens": 6105,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/chat/completions"
             ]
         },
         {
-            "id": "dalle3",
+            "id": "falcon-180b",
             "object": "model",
-            "owned_by": "bing/openai",
-            "info": "ShuttleAI does not support changing the `n` paramater for dalle3 generations. However much Bing gens is how much you will get.",
+            "owned_by": "tiiuae",
+            "tokens": 6105,
+            "maintenance": true,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "llama-2-70b-chat",
+            "object": "model",
+            "owned_by": "metaai",
+            "tokens": 6105,
+            "info": "Llama 2 70b Chat Hf",
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "llama-2-13b-chat",
+            "object": "model",
+            "owned_by": "metaai",
+            "tokens": 2048,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "llama-2-7b-chat",
+            "object": "model",
+            "owned_by": "metaai",
+            "tokens": 2048,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "code-llama-70b",
+            "object": "model",
+            "owned_by": "metaai",
+            "tokens": 6105,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "code-llama-34b",
+            "object": "model",
+            "owned_by": "metaai",
+            "tokens": 6105,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "llava-13b",
+            "object": "model",
+            "owned_by": "metaai",
+            "tokens": 2048,
+            "info": "Llava 13b, either send a 'image' paramater with your model and messages or send an image in the last message.",
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/chat/completions"
+            ]
+        },
+        {
+            "id": "sdxl",
+            "object": "model",
+            "owned_by": "stabilityai",
             "max_images": 4,
-            "multiple_of": 4,
+            "multiple_of": 1,
+            "cost": 2,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/images/generations"
+            ]
+        },
+        {
+            "id": "sdxl-turbo",
+            "object": "model",
+            "owned_by": "stabilityai",
+            "max_images": 4,
+            "multiple_of": 1,
+            "cost": 2,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/images/generations"
+            ]
+        },
+        {
+            "id": "sdxl-emoji",
+            "object": "model",
+            "owned_by": "stabilityai/fofr",
+            "max_images": 4,
+            "multiple_of": 1,
+            "cost": 2,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/images/generations"
+            ]
+        },
+        {
+            "id": "dreamshaper-xl",
+            "object": "model",
+            "owned_by": "stabilityai",
+            "max_images": 4,
+            "multiple_of": 1,
+            "cost": 2,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/images/generations"
+            ]
+        },
+        {
+            "id": "juggernaut-xl",
+            "object": "model",
+            "owned_by": "stabilityai",
+            "max_images": 4,
+            "multiple_of": 1,
+            "cost": 2,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/images/generations"
+            ]
+        },
+        {
+            "id": "dynavision-xl",
+            "object": "model",
+            "owned_by": "stabilityai",
+            "max_images": 4,
+            "multiple_of": 1,
+            "cost": 2,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/images/generations"
+            ]
+        },
+        {
+            "id": "realism-engine-xl",
+            "object": "model",
+            "owned_by": "stabilityai",
+            "max_images": 4,
+            "multiple_of": 1,
+            "cost": 2,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/images/generations"
+            ]
+        },
+        {
+            "id": "sdxl-inpainting",
+            "object": "model",
+            "owned_by": "stabilityai",
+            "max_images": 4,
+            "multiple_of": 1,
+            "cost": 4,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/images/generations"
+            ]
+        },
+        {
+            "id": "turbovision-xl",
+            "object": "model",
+            "owned_by": "stabilityai",
+            "max_images": 4,
+            "multiple_of": 1,
+            "cost": 2,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/images/generations"
+            ]
+        },
+        {
+            "id": "kandinsky-2.2",
+            "object": "model",
+            "owned_by": "sberbank",
+            "max_images": 4,
+            "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/images/generations"
+            ]
+        },
+        {
+            "id": "kandinsky-2",
+            "object": "model",
+            "owned_by": "sberbank",
+            "max_images": 4,
+            "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/images/generations"
+            ]
+        },
+        {
+            "id": "stable-diffusion 2.1",
+            "object": "model",
+            "owned_by": "stabilityai",
+            "max_images": 4,
+            "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/images/generations"
+            ]
+        },
+        {
+            "id": "stable-diffusion 1.5",
+            "object": "model",
+            "owned_by": "stabilityai",
+            "max_images": 4,
+            "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -294,57 +713,34 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "max_images": 4,
             "multiple_of": 1,
             "premium": true,
-            "maintenance": true,
+            "cost": 5,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
         },
         {
-            "id": "sdxl",
+            "id": "dalle3",
             "object": "model",
-            "owned_by": "stabilityai",
+            "owned_by": "bing/openai",
+            "info": "ShuttleAI does not support changing the `n` paramater for dalle3 generations. However much Bing gens is how much you will get.",
             "max_images": 4,
-            "multiple_of": 1,
+            "multiple_of": 4,
+            "cost": 10,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
         },
         {
-            "id": "kandinsky-2.2",
+            "id": "midjourney",
             "object": "model",
-            "owned_by": "sberbank",
+            "owned_by": "davidholz",
             "max_images": 4,
-            "multiple_of": 1,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
-        },
-        {
-            "id": "kandinsky-2",
-            "object": "model",
-            "owned_by": "sberbank",
-            "max_images": 4,
-            "multiple_of": 1,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
-        },
-        {
-            "id": "stable-diffusion 2.1",
-            "object": "model",
-            "owned_by": "stabilityai",
-            "max_images": 4,
-            "multiple_of": 1,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
-        },
-        {
-            "id": "stable-diffusion 1.5",
-            "object": "model",
-            "owned_by": "stabilityai",
-            "max_images": 4,
-            "multiple_of": 1,
+            "multiple_of": 4,
+            "premium": true,
+            "cost": 369,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -355,6 +751,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -365,6 +763,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -375,6 +775,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -385,6 +787,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -395,6 +799,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -405,6 +811,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -415,6 +823,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -425,6 +835,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -435,6 +847,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -445,6 +859,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -455,6 +871,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -465,6 +883,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -475,6 +895,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -485,6 +907,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -495,6 +919,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -505,6 +931,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -515,6 +943,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -525,6 +955,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -535,6 +967,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -545,6 +979,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -555,6 +991,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -565,6 +1003,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -575,6 +1015,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -585,6 +1027,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -595,6 +1039,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -605,6 +1051,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -615,6 +1063,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -625,6 +1075,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -635,6 +1087,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "stabilityai",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -646,6 +1100,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "info": "ICBINP aka ICantBelieveItsNotPhotography by SECO",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -657,6 +1113,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "info": "LCMs: The next generation of generative models after Latent Diffusion Models (LDMs).",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -667,6 +1125,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "deepfloyd",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -677,6 +1137,8 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "owned_by": "material",
             "max_images": 4,
             "multiple_of": 1,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/images/generations"
             ]
@@ -686,7 +1148,7 @@ Please make sure you have the necessary knowledge to use the API effectively.
             "object": "model",
             "owned_by": "elevenlabs",
             "tokens": 333,
-            "info": "Official Eleven Labs multi-lingual audio generation model. Max limit of 333 chars. Make a ticket with premium for higher limits.",
+            "info": "Official Eleven Labs multi-lingual audio generation model. Max limit of 333 chars.",
             "voices": [
                 "rachel",
                 "clyde",
@@ -728,22 +1190,255 @@ Please make sure you have the necessary knowledge to use the API effectively.
                 "giovanni",
                 "mimi"
             ],
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
                 "/v1/audio/generations"
             ]
         },
         {
-            "id": "text-moderation-006",
+            "id": "eleven-labs-2",
+            "object": "model",
+            "owned_by": "elevenlabs",
+            "tokens": 100,
+            "info": "Official Eleven Labs multi-lingual v2 audio generation model. Max limit of ~100 chars.",
+            "voices": [
+                "rachel",
+                "clyde",
+                "domi",
+                "dave",
+                "fin",
+                "bella",
+                "antoni",
+                "thomas",
+                "charlie",
+                "emily",
+                "elli",
+                "callum",
+                "patrick",
+                "harry",
+                "liam",
+                "dorothy",
+                "josh",
+                "arnold",
+                "charlotte",
+                "matilda",
+                "matthew",
+                "james",
+                "joseph",
+                "jeremy",
+                "michael",
+                "ethan",
+                "gigi",
+                "freya",
+                "grace",
+                "daniel",
+                "serena",
+                "adam",
+                "nicole",
+                "jessie",
+                "ryan",
+                "sam",
+                "glinda",
+                "giovanni",
+                "mimi"
+            ],
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/audio/generations"
+            ]
+        },
+        {
+            "id": "eleven-labs-999",
+            "object": "model",
+            "owned_by": "elevenlabs",
+            "tokens": 999,
+            "info": "Eleven Labs multi-lingual audio generation model. Max limit of 999 chars.",
+            "voices": [
+                "rachel",
+                "clyde",
+                "domi",
+                "dave",
+                "fin",
+                "bella",
+                "antoni",
+                "thomas",
+                "charlie",
+                "emily",
+                "elli",
+                "callum",
+                "patrick",
+                "harry",
+                "liam",
+                "dorothy",
+                "josh",
+                "arnold",
+                "charlotte",
+                "matilda",
+                "matthew",
+                "james",
+                "joseph",
+                "jeremy",
+                "michael",
+                "ethan",
+                "gigi",
+                "freya",
+                "grace",
+                "daniel",
+                "serena",
+                "adam",
+                "nicole",
+                "jessie",
+                "ryan",
+                "sam",
+                "glinda",
+                "giovanni",
+                "mimi"
+            ],
+            "premium": true,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/audio/generations"
+            ]
+        },
+        {
+            "id": "tts-1",
             "object": "model",
             "owned_by": "openai",
-            "tokens": 16385,
+            "tokens": 4096,
+            "voices": [
+                "alloy",
+                "echo",
+                "fable",
+                "onyx",
+                "nova",
+                "shimmer"
+            ],
+            "premium": true,
+            "cost": 1,
+            "created": 1687882410,
             "endpoints": [
-                "/v1/chat/completions",
+                "/v1/audio/generations"
+            ]
+        },
+        {
+            "id": "tts-1-hd",
+            "object": "model",
+            "owned_by": "openai",
+            "tokens": 4096,
+            "voices": [
+                "alloy",
+                "echo",
+                "fable",
+                "onyx",
+                "nova",
+                "shimmer"
+            ],
+            "premium": true,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/audio/generations"
+            ]
+        },
+        {
+            "id": "whisper-large",
+            "object": "model",
+            "owned_by": "openai",
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/audio/transcriptions"
+            ]
+        },
+        {
+            "id": "whisper-1",
+            "object": "model",
+            "owned_by": "openai",
+            "premium": true,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/audio/transcriptions"
+            ]
+        },
+        {
+            "id": "text-moderation-stable",
+            "object": "proxy",
+            "proxy_to": "text-moderation-007",
+            "owned_by": "openai",
+            "tokens": 100000,
+            "info": "100,000 characters input limit per request",
+            "cost": 0,
+            "created": 1687882410,
+            "endpoints": [
                 "/v1/moderations"
+            ]
+        },
+        {
+            "id": "text-moderation-latest",
+            "object": "model",
+            "owned_by": "openai",
+            "tokens": 100000,
+            "info": "100,000 characters input limit per request, might be slightly more accurate at times but can false flag.",
+            "cost": 0,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/moderations"
+            ]
+        },
+        {
+            "id": "text-moderation-007",
+            "object": "model",
+            "owned_by": "openai",
+            "tokens": 100000,
+            "info": "100,000 characters input limit per request",
+            "cost": 0,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/moderations"
+            ]
+        },
+        {
+            "id": "text-embedding-3-large",
+            "object": "model",
+            "owned_by": "openai",
+            "tokens": 3072,
+            "info": "also supports multiple inputs at once by using a list of strings as the input",
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/embeddings"
+            ]
+        },
+        {
+            "id": "text-embedding-3-small",
+            "object": "model",
+            "owned_by": "openai",
+            "tokens": 1536,
+            "info": "also supports multiple inputs at once by using a list of strings as the input",
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/embeddings"
+            ]
+        },
+        {
+            "id": "text-embedding-ada-002",
+            "object": "model",
+            "owned_by": "openai",
+            "tokens": 1536,
+            "info": "also supports multiple inputs at once by using a list of strings as the input",
+            "cost": 1,
+            "created": 1687882410,
+            "endpoints": [
+                "/v1/embeddings"
             ]
         }
     ],
     "object": "list",
-    "total": 68
+    "total": 107
 }
 ```
