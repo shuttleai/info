@@ -8,9 +8,8 @@ ShuttleAI API provides `gpt-4` and 100+ other models for free with a super **sta
 
 To obtain a free ShuttleAI API key, follow these steps:
 
-1. Join [our Discord server](https://discord.gg/shuttleai).
-2. Run `/getkey` command in the Discord server.
-3. Verify yourself.
+1. Sign Up at [Our Site](https://shuttleai.app).
+2. Get a key from dashboard
 
 You can view ShuttleAI API docs for better instructions on how to interact with our API at https://docs.shuttleai.app/
 
