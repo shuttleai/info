@@ -2,16 +2,18 @@
 
 ## Introduction
 
-Are you a developer interested in creating a AI bot/site, but you find GPT-4 to be too expensive or you're on a tight budget? Look no further!
-ShuttleAI API provides `gpt-4` and 100+ other models for free with a super **stable** and **free** api!
+Are you a developer keen on integrating AI capabilities into your projects, but find the cost of GPT-4 prohibitive or are operating within budget constraints? Look no further!
+
+ShuttleAI API offers access to `gpt-4`, `dall-e-3`, and over 100 other models for **FREE**, along with a highly **efficient** and **reliable** API service!
+
 ## Getting Started
 
-To obtain a free ShuttleAI API key, follow these steps:
+To obtain your complimentary ShuttleAI API key, simply follow these steps:
 
-1. Sign Up at [Our Site](https://shuttleai.app).
-2. Get a key from dashboard
+1. Register on [Our Platform](https://shuttleai.app).
+2. Proceed to the [Dashboard](https://shuttleai.app/keys) to generate your unique key.
 
-You can view ShuttleAI API docs for better instructions on how to interact with our API at https://docs.shuttleai.app/
+For comprehensive instructions on utilizing our API effectively, refer to the ShuttleAI API documentation available at [https://docs.shuttleai.app/](https://docs.shuttleai.app/).
 
 ## ShuttleAI Models:
 ```json
