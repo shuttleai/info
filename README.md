@@ -16,7 +16,39 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
 ## ShuttleAI Models:
 ```json
 {
+    "object": "list",
     "data": [
+        {
+            "id": "shuttle-turbo",
+            "object": "model",
+            "owned_by": "shuttleai/openai",
+            "tokens": 32768,
+            "info": "Currently points to shuttle-1",
+            "cost": 1,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "shuttle-1",
+            "object": "model",
+            "owned_by": "shuttleai/openai",
+            "tokens": 32768,
+            "info": "Shuttles latest chat completion model with built in support for image recognition & web access released on February 17th, 2024.",
+            "cost": 1,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "shuttle-tools",
+            "object": "model",
+            "owned_by": "shuttleai",
+            "tokens": 32768,
+            "info": "A function/tool calling model. OpenAI format as always.",
+            "premium": true,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
+        },
         {
             "id": "gpt-4-turbo-preview",
             "object": "proxy",
@@ -27,9 +59,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "premium": true,
             "cost": 4,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "gpt-4-0125-preview",
@@ -40,9 +70,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "premium": true,
             "cost": 4,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "gpt-4-1106-preview",
@@ -53,9 +81,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "premium": true,
             "cost": 4,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "gpt-4-vision-preview",
@@ -66,33 +92,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "premium": true,
             "cost": 4,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
-        },
-        {
-            "id": "gpt-4",
-            "object": "model",
-            "owned_by": "openai",
-            "tokens": 8192,
-            "info": "Plain gpt-4, directly from openai enterprise.",
-            "cost": 2,
-            "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
-        },
-        {
-            "id": "gpt-4-bing",
-            "object": "model",
-            "owned_by": "bing/openai",
-            "tokens": 29000,
-            "info": "Bing GPT-4 Turbo. Bing web search is enabled by default. Send `internet: false` to disable.",
-            "cost": 1,
-            "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "gpt-4-32k",
@@ -100,11 +100,9 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "owned_by": "openai",
             "tokens": 32000,
             "info": "Free provider pool of real GPT-4-32k, falls back to Bing GPT-4 32k if free pool is out. Premium pool found @ 32k-0613.",
-            "cost": 3,
+            "cost": 4,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "gpt-4-32k-0613",
@@ -114,9 +112,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "premium": true,
             "cost": 3,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "gpt-4-0613",
@@ -125,33 +121,41 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "tokens": 8192,
             "cost": 2,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
-            "id": "gpt-4-study",
+            "id": "gpt-4",
             "object": "model",
             "owned_by": "openai",
             "tokens": 8192,
-            "info": "Raw GPT-4; great for students.",
-            "premium": true,
+            "info": "GPT-4 is a large multimodal model by OpenAI.",
+            "cost": 2,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "gpt-4-bing-turbo",
+            "object": "model",
+            "owned_by": "openai",
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "gpt-4-bing",
+            "object": "model",
+            "owned_by": "openai",
+            "cost": 1,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "gpt-3.5-turbo",
             "object": "model",
             "owned_by": "openai",
-            "tokens": 4097,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "gpt-3.5-turbo-0125",
@@ -161,9 +165,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "premium": true,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "gpt-3.5-turbo-1106",
@@ -172,9 +174,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "tokens": 16385,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "gpt-3.5-turbo-0613",
@@ -183,9 +183,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "tokens": 4097,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "gpt-3.5-turbo-0301",
@@ -194,9 +192,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "tokens": 4097,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "gpt-3.5-turbo-16k",
@@ -205,9 +201,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "tokens": 16384,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "gpt-3.5-turbo-16k-0613",
@@ -217,9 +211,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "tokens": 16385,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "chatgpt",
@@ -229,49 +221,68 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "info": "official chatgpt (GPT 3.5) aka openai's fastest and most capable free-to-use model aka text-davinci-002-render-sha",
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
-            "id": "code-gpt",
-            "object": "model",
-            "owned_by": "shuttle/openai",
-            "tokens": 16385,
-            "info": "GPT-3.5-Turbo-1106 with added Real-Time Live Code Execution/Interpretation",
-            "premium": true,
-            "file_upload": true,
-            "cost": 3,
-            "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
-        },
-        {
-            "id": "internet-gpt",
-            "object": "model",
-            "owned_by": "shuttle/openai",
-            "tokens": 16385,
-            "info": "GPT-3.5-Turbo-1106 with added Real-Time Live Web Browsing",
-            "premium": true,
-            "file_upload": true,
-            "cost": 2,
-            "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
-        },
-        {
-            "id": "claude-instant",
+            "id": "claude-3-opus",
             "object": "model",
             "owned_by": "anthropic",
-            "tokens": 25000,
-            "file_upload": true,
+            "tokens": 200000,
+            "premium": true,
+            "cost": 9,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "claude-3-sonnet",
+            "object": "model",
+            "owned_by": "anthropic",
+            "tokens": 200000,
+            "premium": true,
+            "cost": 7,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "claude-3-haiku-200k",
+            "object": "model",
+            "owned_by": "anthropic",
+            "tokens": 200000,
+            "premium": true,
+            "cost": 5,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "claude-3-haiku",
+            "object": "model",
+            "owned_by": "anthropic",
+            "tokens": 72000,
+            "info": "Context window has been shortened to optimize for speed and cost. For longer context messages, please try Claude-3-Haiku-200k.",
+            "premium": true,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "claude-2.1",
+            "object": "model",
+            "owned_by": "anthropic",
+            "tokens": 200000,
+            "premium": true,
+            "cost": 4,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "claude-2.0",
+            "object": "model",
+            "owned_by": "anthropic",
+            "tokens": 100000,
+            "premium": true,
+            "cost": 4,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "claude-instant-100k",
@@ -282,33 +293,45 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "file_upload": true,
             "cost": 3,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
-            "id": "claude-2.0",
+            "id": "claude-instant",
             "object": "model",
             "owned_by": "anthropic",
-            "tokens": 100000,
-            "premium": true,
-            "cost": 4,
+            "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
-            "id": "claude-2.1",
+            "id": "gemini-1.5-pro",
             "object": "model",
-            "owned_by": "anthropic",
-            "tokens": 200000,
+            "owned_by": "google",
+            "tokens": 1000000,
             "premium": true,
-            "cost": 4,
+            "cost": 9,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "gemini-pro",
+            "object": "model",
+            "owned_by": "google",
+            "tokens": 30724,
+            "premium": true,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "gemini-pro-vision",
+            "object": "model",
+            "owned_by": "google",
+            "tokens": 30724,
+            "premium": true,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "palm-2",
@@ -317,35 +340,42 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "tokens": 8192,
             "cost": 2,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
-            "id": "gemini-pro",
+            "id": "mistral-large",
             "object": "model",
-            "owned_by": "google",
-            "tokens": 30720,
-            "info": "very jailbreakable, works best when sending approval assistant message after jailbreak.",
+            "owned_by": "mistralai",
+            "info": "Mistral's Latest and Largest Model.",
+            "cost": 4,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "mistral-next",
+            "object": "model",
+            "owned_by": "mistralai",
+            "info": "Prototype model with extra concision.",
             "premium": true,
+            "cost": 4,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "mistral-medium",
+            "object": "model",
+            "owned_by": "mistralai",
             "cost": 2,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
-            "id": "gemini-pro-vision",
+            "id": "mistral-small",
             "object": "model",
-            "owned_by": "google",
-            "tokens": 12288,
-            "info": "Gemini Pro Vision, pass an `image` variable with your image (url, bytes, base64).",
-            "premium": true,
-            "cost": 3,
+            "owned_by": "mistralai",
+            "cost": 2,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "mistral-7b",
@@ -354,20 +384,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "tokens": 4096,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
-        },
-        {
-            "id": "mistral-medium",
-            "object": "model",
-            "owned_by": "mistralai",
-            "tokens": 32768,
-            "cost": 1,
-            "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "mixtral-8x7b",
@@ -376,9 +393,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "tokens": 32768,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "dolphin-mixtral-8x7b",
@@ -387,9 +402,15 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "tokens": 4096,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "chronos-hermes-13b",
+            "object": "model",
+            "owned_by": "chronos/hermes",
+            "cost": 1,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "pplx-70b-online",
@@ -398,9 +419,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "tokens": 32768,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "pplx-70b-chat",
@@ -409,9 +428,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "tokens": 32768,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "pplx-7b-online",
@@ -420,9 +437,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "tokens": 32768,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "pplx-7b-chat",
@@ -431,9 +446,41 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "tokens": 32768,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "nous-capybara-34b",
+            "object": "model",
+            "owned_by": "nous",
+            "tokens": 200000,
+            "cost": 4,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "yi-34b-chat",
+            "object": "model",
+            "owned_by": "yi",
+            "tokens": 200000,
+            "cost": 4,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "starcoder-16b",
+            "object": "model",
+            "owned_by": "star",
+            "cost": 2,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "starcoder-7b",
+            "object": "model",
+            "owned_by": "star",
+            "cost": 2,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "deepseek-coder",
@@ -442,9 +489,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "tokens": 4096,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "deepseek-chat",
@@ -453,9 +498,16 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "tokens": 4096,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "airoboros-2-70b",
+            "object": "model",
+            "owned_by": "jondurbin",
+            "tokens": 6105,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "airoboros-70b",
@@ -464,9 +516,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "tokens": 6105,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "falcon-180b",
@@ -476,9 +526,41 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "maintenance": true,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "phind-34b",
+            "object": "model",
+            "owned_by": "phind",
+            "cost": 2,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "phind-code-llama-v2-34b",
+            "object": "model",
+            "owned_by": "phind",
+            "cost": 2,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "code-llama-70b",
+            "object": "model",
+            "owned_by": "metaai",
+            "tokens": 6105,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "code-llama-34b",
+            "object": "model",
+            "owned_by": "metaai",
+            "tokens": 6105,
+            "cost": 1,
+            "created": 1687882410,
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "llama-2-70b-chat",
@@ -488,9 +570,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "info": "Llama 2 70b Chat Hf",
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "llama-2-13b-chat",
@@ -499,9 +579,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "tokens": 2048,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "llama-2-7b-chat",
@@ -510,31 +588,15 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "tokens": 2048,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
-            "id": "code-llama-70b",
+            "id": "llama-summarize",
             "object": "model",
             "owned_by": "metaai",
-            "tokens": 6105,
-            "cost": 1,
+            "cost": 2,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
-        },
-        {
-            "id": "code-llama-34b",
-            "object": "model",
-            "owned_by": "metaai",
-            "tokens": 6105,
-            "cost": 1,
-            "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
         },
         {
             "id": "llava-13b",
@@ -544,21 +606,43 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "info": "Llava 13b, either send a 'image' paramater with your model and messages or send an image in the last message.",
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/chat/completions"
-            ]
+            "endpoint": "/v1/chat/completions"
+        },
+        {
+            "id": "midjourney",
+            "object": "model",
+            "owned_by": "midjourney",
+            "max_images": 4,
+            "multiple_of": 4,
+            "premium": true,
+            "cost": 369,
+            "created": 1687882410,
+            "endpoint": "/v1/images/generations"
+        },
+        {
+            "id": "dall-e-3",
+            "object": "model",
+            "owned_by": "openai",
+            "cost": 4,
+            "created": 1687882410,
+            "endpoint": "/v1/images/generations"
+        },
+        {
+            "id": "dall-e-3-premium",
+            "object": "model",
+            "owned_by": "openai",
+            "premium": true,
+            "cost": 4,
+            "created": 1687882410,
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "sdxl",
             "object": "model",
             "owned_by": "stabilityai",
-            "max_images": 4,
-            "multiple_of": 1,
-            "cost": 2,
+            "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "sdxl-turbo",
@@ -568,9 +652,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 2,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "sdxl-emoji",
@@ -580,9 +662,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 2,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "dreamshaper-xl",
@@ -592,9 +672,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 2,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "juggernaut-xl",
@@ -604,9 +682,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 2,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "dynavision-xl",
@@ -616,9 +692,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 2,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "realism-engine-xl",
@@ -628,9 +702,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 2,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "sdxl-inpainting",
@@ -640,9 +712,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 4,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "turbovision-xl",
@@ -652,9 +722,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 2,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "kandinsky-2.2",
@@ -664,9 +732,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "kandinsky-2",
@@ -676,9 +742,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "stable-diffusion 2.1",
@@ -688,9 +752,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "stable-diffusion 1.5",
@@ -700,49 +762,15 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
-            "id": "dall-e-3",
+            "id": "playground-v2.5",
             "object": "model",
-            "owned_by": "openai",
-            "info": "OpenAI's DALL-E 3. Does support the `n` paramter.",
-            "max_images": 4,
-            "multiple_of": 1,
-            "premium": true,
-            "cost": 5,
+            "owned_by": "playgroundai",
+            "cost": 2,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
-        },
-        {
-            "id": "dalle3",
-            "object": "model",
-            "owned_by": "bing/openai",
-            "info": "ShuttleAI does not support changing the `n` paramater for dalle3 generations. However much Bing gens is how much you will get.",
-            "max_images": 4,
-            "multiple_of": 4,
-            "cost": 10,
-            "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
-        },
-        {
-            "id": "midjourney",
-            "object": "model",
-            "owned_by": "davidholz",
-            "max_images": 4,
-            "multiple_of": 4,
-            "premium": true,
-            "cost": 369,
-            "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "dreamshaper-v8",
@@ -752,9 +780,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "rev-animated",
@@ -764,9 +790,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "anything-v5",
@@ -776,9 +800,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "absolutereality-v1.8.1",
@@ -788,9 +810,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "realisticvision-v5",
@@ -800,9 +820,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "timeless-v1",
@@ -812,9 +830,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "portrait-v1",
@@ -824,9 +840,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "analog",
@@ -836,9 +850,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "anything-v3",
@@ -848,9 +860,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "anything-v4",
@@ -860,9 +870,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "abyssorangemix",
@@ -872,9 +880,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "deliberate",
@@ -884,9 +890,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "dreamlike-v1",
@@ -896,9 +900,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "dreamlike-v2",
@@ -908,9 +910,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "dreamshaper-5",
@@ -920,9 +920,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "dreamshaper-6",
@@ -932,9 +930,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "elldrethvividmix",
@@ -944,9 +940,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "lyriel-v15",
@@ -956,9 +950,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "lyriel-v16",
@@ -968,9 +960,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "mechamix",
@@ -980,9 +970,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "meinamix",
@@ -992,9 +980,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "realisticvs-v14",
@@ -1004,9 +990,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "realisticvs-v20",
@@ -1016,9 +1000,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "riffusion",
@@ -1028,9 +1010,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "sd-v14",
@@ -1040,9 +1020,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "sd-v15",
@@ -1052,9 +1030,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "sbp",
@@ -1064,9 +1040,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "theallysmix",
@@ -1076,9 +1050,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "openjourney",
@@ -1088,9 +1060,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "icbinp",
@@ -1101,9 +1071,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "latent-consistency-model",
@@ -1114,9 +1082,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "deepfloyd-if",
@@ -1126,9 +1092,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "material-diffusion",
@@ -1138,219 +1102,76 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "multiple_of": 1,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/images/generations"
-            ]
+            "endpoint": "/v1/images/generations"
         },
         {
             "id": "eleven-labs",
             "object": "model",
             "owned_by": "elevenlabs",
-            "tokens": 333,
-            "info": "Official Eleven Labs multi-lingual audio generation model. Max limit of 333 chars.",
-            "voices": [
-                "rachel",
-                "clyde",
-                "domi",
-                "dave",
-                "fin",
-                "bella",
-                "antoni",
-                "thomas",
-                "charlie",
-                "emily",
-                "elli",
-                "callum",
-                "patrick",
-                "harry",
-                "liam",
-                "dorothy",
-                "josh",
-                "arnold",
-                "charlotte",
-                "matilda",
-                "matthew",
-                "james",
-                "joseph",
-                "jeremy",
-                "michael",
-                "ethan",
-                "gigi",
-                "freya",
-                "grace",
-                "daniel",
-                "serena",
-                "adam",
-                "nicole",
-                "jessie",
-                "ryan",
-                "sam",
-                "glinda",
-                "giovanni",
-                "mimi"
-            ],
+            "voices": "https://api.shuttleai.app/v1/voices/eleven-labs",
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/audio/generations"
-            ]
+            "endpoint": "/v1/audio/speech"
         },
         {
             "id": "eleven-labs-2",
             "object": "model",
             "owned_by": "elevenlabs",
-            "tokens": 100,
-            "info": "Official Eleven Labs multi-lingual v2 audio generation model. Max limit of ~100 chars.",
-            "voices": [
-                "rachel",
-                "clyde",
-                "domi",
-                "dave",
-                "fin",
-                "bella",
-                "antoni",
-                "thomas",
-                "charlie",
-                "emily",
-                "elli",
-                "callum",
-                "patrick",
-                "harry",
-                "liam",
-                "dorothy",
-                "josh",
-                "arnold",
-                "charlotte",
-                "matilda",
-                "matthew",
-                "james",
-                "joseph",
-                "jeremy",
-                "michael",
-                "ethan",
-                "gigi",
-                "freya",
-                "grace",
-                "daniel",
-                "serena",
-                "adam",
-                "nicole",
-                "jessie",
-                "ryan",
-                "sam",
-                "glinda",
-                "giovanni",
-                "mimi"
-            ],
-            "cost": 1,
+            "voices": "https://api.shuttleai.app/v1/voices/eleven-labs",
+            "premium": true,
+            "cost": 2,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/audio/generations"
-            ]
+            "endpoint": "/v1/audio/speech"
         },
         {
             "id": "eleven-labs-999",
             "object": "model",
             "owned_by": "elevenlabs",
-            "tokens": 999,
-            "info": "Eleven Labs multi-lingual audio generation model. Max limit of 999 chars.",
-            "voices": [
-                "rachel",
-                "clyde",
-                "domi",
-                "dave",
-                "fin",
-                "bella",
-                "antoni",
-                "thomas",
-                "charlie",
-                "emily",
-                "elli",
-                "callum",
-                "patrick",
-                "harry",
-                "liam",
-                "dorothy",
-                "josh",
-                "arnold",
-                "charlotte",
-                "matilda",
-                "matthew",
-                "james",
-                "joseph",
-                "jeremy",
-                "michael",
-                "ethan",
-                "gigi",
-                "freya",
-                "grace",
-                "daniel",
-                "serena",
-                "adam",
-                "nicole",
-                "jessie",
-                "ryan",
-                "sam",
-                "glinda",
-                "giovanni",
-                "mimi"
-            ],
+            "voices": "https://api.shuttleai.app/v1/voices/eleven-labs",
             "premium": true,
-            "cost": 1,
+            "cost": 3,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/audio/generations"
-            ]
+            "endpoint": "/v1/audio/speech"
+        },
+        {
+            "id": "speechify",
+            "object": "model",
+            "owned_by": "speechify",
+            "tokens": 3000,
+            "voices": "https://api.shuttleai.app/v1/voices/speechify",
+            "cost": 3,
+            "created": 1687882410,
+            "endpoint": "/v1/audio/speech"
         },
         {
             "id": "tts-1",
             "object": "model",
             "owned_by": "openai",
             "tokens": 4096,
-            "voices": [
-                "alloy",
-                "echo",
-                "fable",
-                "onyx",
-                "nova",
-                "shimmer"
-            ],
+            "voices": "https://api.shuttleai.app/v1/voices/openai-tts",
             "premium": true,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/audio/generations"
-            ]
+            "endpoint": "/v1/audio/speech"
         },
         {
             "id": "tts-1-hd",
             "object": "model",
             "owned_by": "openai",
             "tokens": 4096,
-            "voices": [
-                "alloy",
-                "echo",
-                "fable",
-                "onyx",
-                "nova",
-                "shimmer"
-            ],
+            "voices": "https://api.shuttleai.app/v1/voices/openai-tts",
             "premium": true,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/audio/generations"
-            ]
+            "endpoint": "/v1/audio/speech"
         },
         {
             "id": "whisper-large",
             "object": "model",
             "owned_by": "openai",
-            "cost": 1,
+            "cost": 2,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/audio/transcriptions"
-            ]
+            "endpoint": "/v1/audio/transcriptions"
         },
         {
             "id": "whisper-1",
@@ -1359,46 +1180,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "premium": true,
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/audio/transcriptions"
-            ]
-        },
-        {
-            "id": "text-moderation-stable",
-            "object": "proxy",
-            "proxy_to": "text-moderation-007",
-            "owned_by": "openai",
-            "tokens": 100000,
-            "info": "100,000 characters input limit per request",
-            "cost": 0,
-            "created": 1687882410,
-            "endpoints": [
-                "/v1/moderations"
-            ]
-        },
-        {
-            "id": "text-moderation-latest",
-            "object": "model",
-            "owned_by": "openai",
-            "tokens": 100000,
-            "info": "100,000 characters input limit per request, might be slightly more accurate at times but can false flag.",
-            "cost": 0,
-            "created": 1687882410,
-            "endpoints": [
-                "/v1/moderations"
-            ]
-        },
-        {
-            "id": "text-moderation-007",
-            "object": "model",
-            "owned_by": "openai",
-            "tokens": 100000,
-            "info": "100,000 characters input limit per request",
-            "cost": 0,
-            "created": 1687882410,
-            "endpoints": [
-                "/v1/moderations"
-            ]
+            "endpoint": "/v1/audio/transcriptions"
         },
         {
             "id": "text-embedding-3-large",
@@ -1408,9 +1190,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "info": "also supports multiple inputs at once by using a list of strings as the input",
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/embeddings"
-            ]
+            "endpoint": "/v1/embeddings"
         },
         {
             "id": "text-embedding-3-small",
@@ -1420,9 +1200,7 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "info": "also supports multiple inputs at once by using a list of strings as the input",
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/embeddings"
-            ]
+            "endpoint": "/v1/embeddings"
         },
         {
             "id": "text-embedding-ada-002",
@@ -1432,12 +1210,67 @@ You can view ShuttleAI API docs for better instructions on how to interact with 
             "info": "also supports multiple inputs at once by using a list of strings as the input",
             "cost": 1,
             "created": 1687882410,
-            "endpoints": [
-                "/v1/embeddings"
-            ]
+            "endpoint": "/v1/embeddings"
+        },
+        {
+            "id": "text-moderation-latest",
+            "object": "model",
+            "owned_by": "openai",
+            "cost": 1,
+            "created": 1687882410,
+            "endpoint": "/v1/moderations"
+        },
+        {
+            "id": "text-moderation-stable",
+            "object": "model",
+            "owned_by": "openai",
+            "cost": 1,
+            "created": 1687882410,
+            "endpoint": "/v1/moderations"
+        },
+        {
+            "id": "insult-1",
+            "object": "model",
+            "owned_by": "shuttleai",
+            "cost": 1,
+            "created": 1687882410,
+            "endpoint": "/v1/insult"
+        },
+        {
+            "id": "joke-1",
+            "object": "model",
+            "owned_by": "shuttleai",
+            "cost": 1,
+            "created": 1687882410,
+            "endpoint": "/v1/joke"
+        },
+        {
+            "id": "py-minify-1",
+            "object": "model",
+            "owned_by": "shuttleai",
+            "info": "Instant Python Code Minification",
+            "cost": 1,
+            "created": 1687882410,
+            "endpoint": "/v1/code/minify"
+        },
+        {
+            "id": "search-google",
+            "object": "model",
+            "owned_by": "google",
+            "info": "Includes web and image search, as well as support for many languages.",
+            "cost": 2,
+            "created": 1687882410,
+            "endpoint": "/v1/web-search"
+        },
+        {
+            "id": "search-ddg",
+            "object": "model",
+            "owned_by": "duckduckgo",
+            "cost": 1,
+            "created": 1687882410,
+            "endpoint": "/v1/web-search"
         }
     ],
-    "object": "list",
-    "total": 107
+    "total": 131
 }
 ```
