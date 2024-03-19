@@ -4,7 +4,7 @@
 
 Are you a developer keen on integrating AI capabilities into your projects, but find the cost of GPT-4 prohibitive or are operating within budget constraints? Look no further!
 
-ShuttleAI API offers access to `gpt-4`, `dall-e-3`, and over 100 other models for **FREE**, along with a highly **efficient** and **reliable** API service!
+ShuttleAI API offers **FREE** access to `gpt-4`, `dall-e-3`, and over 100+ other models directly within the API, providing a highly **efficient** and **reliable** service!
 
 ## Getting Started
 
