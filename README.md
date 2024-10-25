@@ -6,7 +6,9 @@ Are you a developer keen on integrating AI capabilities into your projects, but 
 
 ShuttleAI API offers **FREE** access to `claude-3.5-sonnet`, `claude-3-opus`, `o1-preview`, `o1-mini`, `gpt-4o`, and over 100+ other models directly within the API, providing a highly **efficient** and **reliable** service!
 
-Check out `shuttle-2.5` and `s1` for chat completions and `shuttle-2-diffusion` for image generations!
+Our discord: https://discord.gg/shuttleai
+
+Check out `shuttle-3` and `s1` for chat completions and `shuttle-2-diffusion` for image generations!
 
 ## Getting Started
 
